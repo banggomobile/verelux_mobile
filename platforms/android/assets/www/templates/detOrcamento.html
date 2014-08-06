@@ -1,0 +1,35 @@
+<ion-view title="Pedido nº {{ detalhes.id }}">
+  	<ion-content class="has-header has-footer">
+  	<div ng-controller="detOrcamentoCtrl">
+        <ion-list>
+          	<ion-item>
+            	Data: {{ detalhes.Data }}
+            	<br>Cliente: {{ detalhes.Cliente }}
+            	<div class="list list-inset">
+            		<div class="item">
+            			Item: {{ detalhes.item }}
+            			<span class="item-note dark">
+            				Quantidade: {{ detalhes.Quantidade }}
+            			</span>
+            		</div>
+            		<div class="item">
+            			Perfil: {{ detalhes.Perfil }}
+            		</div>
+            		<div class="item">
+            			Acabamento: {{ detalhes.Acabamento }}
+            		</div>
+            		<div class="item">
+            			Medidas: {{ detalhes.Largura }} x {{ detalhes.Altura }} cm
+            		</div>
+            		<div class="item">
+            			Valor: {{ detalhes.Valor }}
+            		</div>
+            	</div>
+          	</ion-item>
+        </ion-list>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer bar-balanced">
+  	<div class="title">Aprovado</div>
+  </div>
+</ion-view>

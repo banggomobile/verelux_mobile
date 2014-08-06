@@ -1,0 +1,28 @@
+<ion-view title="Novo Orcamento">
+	<ion-content class="has-header padding">
+		<div class="list card">
+			<div class="item item item-avatar">
+                <h2>Selecione o acabamento</h2>
+                <div ng-show="selected_vidro">
+                    Acabamento: {{ selected_vidro.title }}
+                </div>
+            </div>
+            <div class="item item item-body">
+                <div ng-show="selected_vidro">
+                    <img ng-src="{{selected_vidro.imageUrl}}" class="full-image">
+                </div>
+                <div ng-hide="selected_vidro">
+                    <img ng-src="img/visual.jpg" class="full-image">
+                </div>
+            </div>
+        </div>
+    	<div class="list list-inset">
+    		<ion-list>
+    			<ion-item ng-repeat="vidro in vidros" type="item-text-wrap" ng-click="select(vidro)">
+        		{{vidro.title}}
+      			</ion-item>
+    		</ion-list>
+    	</div>
+            <a class="button button-block icon-right ion-chevron-right button-balanced" href="#/dados">Proseguir</a>
+    </ion-content>
+</ion-view>
